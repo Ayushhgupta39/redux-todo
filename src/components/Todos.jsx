@@ -13,14 +13,14 @@ function Todos() {
 
   return (
     <div>
-      <h1>Todos</h1>
+      <h1>Todo List</h1>
       {todos.map((todo) => (
         <li
           className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
           key={todo.id}
         >
           <div className="text-white">{todo.text}</div>
-          <button onClick={deleteTodo(todo.id)}>Delete</button>
+          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
         </li>
       ))}
     </div>
